@@ -143,7 +143,3 @@ python3 server.py
 ```
 
 You can now navigate to 'localhost:5000/' to access the website
-
-## About Me
-
-👩🏻 Hi, my name is Raquel and I'm a Software Engineer. This travel web app was created in 4 weeks as my capstone project at Hackbright Academy, a 12-week accelerated Software Engineering fellowship. Feel free to connect on [LinkedIn](https://www.linkedin.com/in/raqueldpfeifle/)!
