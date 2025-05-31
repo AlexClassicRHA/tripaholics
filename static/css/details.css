@@ -1,0 +1,101 @@
+/* TRIP DETAILS PAGE */
+
+:root {
+  --orange: #fa8443;
+  --light-blue: #e2f6fc;
+  --main-blue: #70c8df;
+  --white-color: #fff;
+  --black-color: #000;
+  --hover-color: #f56b21;
+  --light-orange: #fde1d2;
+}
+
+#checklist-container {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border: none;
+}
+
+#checklist-form-container {
+  padding-left: 10px;
+}
+
+#add-new-task-input {
+  max-width: 500px;
+  margin-bottom: 10px;
+}
+
+#add-task-submit {
+  background-color: var(--orange);
+  border: none;
+}
+
+#add-task-submit:hover {
+  background-color: var(--hover-color);
+  border: none;
+}
+
+#details-btns {
+  background-color: var(--orange);
+  border: none;
+}
+
+#details-btns:hover {
+  background-color: var(--hover-color);
+}
+
+.completed {
+  color: #008000;
+}
+
+.uncompleted {
+  color: #ff0000;
+}
+
+#mark-done,
+#mark-undone {
+  padding: 8px 10px;
+  background-color: transparent;
+  color: var(--black-color);
+  border: 1px solid var(--black-color);
+  border-radius: 8px;
+}
+
+#mark-done:hover,
+#mark-undone:hover {
+  background-color: var(--black-color);
+  color: white;
+  border: 1px solid var(--black-color);
+  border-radius: 8px;
+}
+
+#delete-task-btn {
+  padding: 8px 10px;
+  background-color: transparent;
+  color: #ff0000;
+  border: 1px solid #ff0000;
+  border-radius: 8px;
+}
+
+#delete-task-btn:hover {
+  background-color: #ff0000;
+  color: white;
+  border: 1px solid #ff0000;
+  border-radius: 8px;
+}
+
+.checklist-box,
+.reservation-card,
+.activity-card {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border: none;
+}
+
+@media screen and (max-width: 480px) {
+  #details-btns {
+    margin-top: 10px;
+  }
+}

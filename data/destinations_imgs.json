@@ -1,0 +1,32 @@
+[
+  {
+    "city_name": "New York City, US",
+    "place_name": "Times Square",
+    "description": "Times Square in New York City",
+    "url": "/static/img/times-square.jpg"
+  },
+  {
+    "city_name": "Al Haram, Egypt",
+    "place_name": "The Great Pyramid of Giza",
+    "description": "The Great Pyramid of Giza, Egypt",
+    "url": "/static/img/pyramid-of-giza.jpg"
+  },
+  {
+    "city_name": "Rome, Italy",
+    "place_name": "Colosseum",
+    "description": "The Colosseum amphitheatre in the city of Rome, Italy",
+    "url": "/static/img/colosseum-rome.jpg"
+  },
+  {
+    "city_name": "Santorini, Greece",
+    "place_name": "The Towns of Santorini",
+    "description": "The Towns of Santorini, Greece",
+    "url": "/static/img/santorini-greece.jpg"
+  },
+  {
+    "city_name": "Paris, France",
+    "place_name": "Eiffel Tower",
+    "description": "Eiffel Tower in Paris, France",
+    "url": "/static/img/eiffel-tower-paris.jpg"
+  }
+]

@@ -1,0 +1,581 @@
+/* ALL PAGES STYLES */
+
+:root {
+  /* colors variables go here as --variable-name: */
+  --orange: #fa8443;
+  --light-blue: #e2f6fc;
+  --main-blue: #70c8df;
+  --white-color: #fff;
+  --black-color: #000;
+  --hover-color: #f56b21;
+  --light-orange: #fde1d2;
+
+  --swiper-image-ratio: 33.3%; /* ratio 16:9 = 56.25% */
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/*регулировка ширины страницы*/
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+.container, .container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  margin-top: 30px !important;
+  color: var(--black-color);
+}
+
+h1 {
+  font-weight: 700;
+}
+
+p:not(.completed):not(.uncompleted) {
+  font-size: 1.2em;
+}
+
+li {
+  font-size: 1.3em;
+}
+
+/* HERO SECTION - HOMEPAGE */
+#hero-image {
+  background-image: linear-gradient(
+      rgba(40, 40, 50, 0.5),
+      rgba(32, 32, 19, 0.5)
+    ),
+    url("/static/img/hero-image.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  background-attachment: fixed;
+}
+
+#hero-section {
+  color: white;
+  padding: calc(100vh / 3) 5vw;
+}
+
+/* targeting homepage button */
+#plan-trip-btn {
+  background-color: var(--orange);
+  border: none;
+  font-size: 1.4em;
+}
+
+#plan-trip-btn:hover {
+  background: var(--hover-color);
+}
+
+#btn-watch-demo {
+  background-color: transparent;
+  border: 2px solid var(--white-color);
+  font-size: 1.2em;
+  color: var(--white-color);
+}
+
+#btn-watch-demo:hover {
+  background-color: var(--orange);
+  border: 2px solid var(--orange);
+  font-size: 1.2em;
+  color: var(--white-color);
+}
+
+/* NAVBAR */
+a {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:not(#signup-btn):not(#delete-task-btn):not(#mark-done):not(#mark-undone):not(
+    #editTrip-btn
+  ):not(#new-trip-ne):hover {
+  color: var(--orange) !important;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.navbar {
+  background-color: var(--white-color) !important;
+  padding: 3rem 2rem;
+  height: 0rem;
+  min-height: 12vh;
+}
+
+.navbar .navbar-brand a {
+  padding: 1rem 0;
+  display: block;
+  text-decoration: none;
+}
+
+.nav-link {
+  color: var(--black-color);
+}
+
+.navbar-brand {
+  font-family: "Patrick Hand", cursive;
+  font-size: 2.5rem;
+  color: var(--orange);
+}
+
+.navbar-toggler {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  transition: 0.5s ease-in-out;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+  border: 0;
+}
+
+.navbar-toggler span {
+  margin: 0;
+  padding: 0;
+}
+
+.toggler-icon {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: var(--orange);
+  border-radius: 1px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.25s ease-in-out;
+}
+
+.middle-line {
+  margin-top: 0px;
+}
+
+/* when nav is clicked  */
+.navbar-toggler .first-line {
+  margin-top: 0px;
+  transform: rotate(135deg);
+}
+
+.navbar-toggler .middle-line {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.navbar-toggler .bottom-line {
+  margin-top: 0px;
+  transform: rotate(-135deg);
+}
+
+/* when nav is collapsed */
+.navbar-toggler.collapsed .first-line {
+  margin-top: -20px;
+  transform: rotate(0deg);
+}
+
+.navbar-toggler.collapsed .middle-line {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.navbar-toggler.collapsed .bottom-line {
+  margin-top: 20px;
+  transform: rotate(0deg);
+}
+
+#navbarToggler {
+  background-color: white;
+}
+
+/* color of the lines */
+.navbar-toggler.collapsed .toggler-icon {
+  background: linear-gradient(
+    263deg,
+    rgba(250, 132, 67, 1) 0%,
+    rgba(244, 187, 156, 1) 100%
+  );
+}
+
+.navbar-expand-lg .navbar-nav .nav-link:hover {
+  border-bottom: 3px solid var(--orange);
+}
+
+.navbar-expand-lg .navbar-nav .nav-link.active {
+  border-bottom: 3px solid var(--orange);
+  color: var(--orange);
+}
+
+nav,
+.navbar {
+  padding: 20px;
+  /* font-size: 1.2rem; */
+}
+
+#signup-btn {
+  border: none;
+  padding: 10px 20px;
+  background-color: var(--orange);
+  border-radius: 6px;
+  font-size: 1.2rem;
+  color: var(--white-color);
+}
+
+#signup-btn:hover {
+  background-color: var(--hover-color);
+  border-radius: 6px;
+  color: var(--white-color);
+}
+
+@media screen and (max-width: 480px) {
+  #signup-btn {
+    padding: 5px 10px;
+    width: 10%;
+  }
+}
+
+/* HOMEPAGE STYLE  */
+
+#FAQ-accordion {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.accordion-item {
+  /* border: 1px solid rgba(35, 65, 100, 0.15); */
+  border: none;
+  /* margin-bottom: 10px; */
+  font-size: 15px;
+}
+
+.accordion-button {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.accordion-button:not(.collapsed) {
+  color: var(--black-color);
+}
+
+.accordion-button:not(.collapsed)::after {
+  filter: brightness(100%) invert(80%);
+}
+
+.accordion-button:focus {
+  box-shadow: inherit;
+  font-weight: bold;
+}
+
+.accordion-item .accordion-button {
+  background-color: var(--light-orange);
+}
+
+/* CAROUSEL */
+.swiper-container {
+  width: 100%;
+  padding-bottom: 30px;
+  cursor: pointer;
+}
+
+.suggestion-card {
+  position: relative;
+  max-width: 800px;
+}
+
+.suggestion-card img {
+  width: 100%;
+}
+
+.suggestion-card figcaption {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  position: absolute;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#swiper-button {
+  color: var(--orange);
+  padding: 0 20px 0 20px;
+}
+
+#swiper-button:hover {
+  color: var(--hover-color);
+}
+
+/* HOMEPAGE FOOTER  */
+
+footer {
+    background-color: #f8f9fa;
+    padding-bottom: 2rem;
+}
+
+footer h5 {
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+    position: relative;
+}
+
+footer h5:after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: var(--orange);
+}
+
+footer .list-unstyled a {
+    transition: all 0.3s ease;
+}
+
+footer .list-unstyled a:hover {
+    color: var(--orange) !important;
+    padding-left: 5px;
+}
+
+.border-top {
+    border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Оранжевые акценты */
+.text-orange {
+    color: var(--orange) !important;
+}
+
+.btn-orange {
+    background-color: var(--orange);
+    color: white;
+    border: none;
+}
+
+.btn-orange:hover {
+    background-color: var(--hover-color);
+    color: white;
+}
+
+/* MY TRIPS PAGE  */
+
+.map {
+  width: 90%;
+  height: 70%;
+  position: relative;
+  border-radius: 50px;
+  margin: 0 auto 0 auto;
+}
+
+#add-new-trip {
+  float: right;
+  margin-right: 45px;
+  border: 2px solid var(--orange);
+  color: var(--orange);
+  font-size: 1.2em;
+}
+
+#trip-cards {
+  padding: 20px 0;
+}
+
+.trip-card-box {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border: none;
+}
+
+#editTrip-btn {
+  border-color: var(--black-color);
+  color: var(--black-color);
+}
+
+#editTrip-btn:hover {
+  border-color: var(--black-color);
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+
+#new-trip-ne {
+  background-color: var(--orange);
+  border: none;
+}
+
+#new-trip-ne:hover {
+  background-color: var(--hover-color);
+  border: none;
+}
+
+/* ACCOUNT PAGE  */
+
+#account-info {
+  padding: 70px;
+  font-size: 1.2em;
+}
+
+#account-btn {
+  background-color: var(--orange);
+  border: none;
+  padding: 10px 20px;
+  font-size: inherit;
+}
+
+#account-btn:hover {
+  background-color: var(--hover-color);
+}
+
+/* 404 ERROR PAGE */
+
+#error-404-page {
+  padding: 100px;
+}
+
+.error-404-img {
+  width: 100px;
+}
+
+#backHome-btn {
+  background-color: var(--orange);
+  border: none;
+}
+
+#backHome-btn:hover {
+  background-color: var(--hover-color);
+}
+
+/* EDIT A TRIP PAGE  */
+
+#edit-trip-pg {
+  padding: 100px;
+}
+
+#edit-trip-btn {
+  background-color: var(--orange);
+  border: none;
+}
+
+#edit-trip-btn:hover {
+  background-color: var(--hover-color);
+}
+
+/* LEFT ARROW ICON  */
+
+#left-arrow-icon {
+  fill: var(--orange);
+}
+
+#left-arrow-icon:hover {
+  fill: var(--hover-color);
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 768px) {
+  #navbarToggler {
+    width: 100vw;
+    height: 80vh;
+    padding: 40px;
+  }
+
+  .navbar-nav {
+    float: none;
+    display: block;
+    text-align: left;
+    margin: 0;
+  }
+
+  #signup-btn {
+    margin-top: 10px;
+  }
+
+  #hero-image {
+    background-position: center center;
+  }
+
+  #hero-section {
+    padding: 20vh 10vw;
+    width: 100%;
+  }
+
+  #account-info {
+    padding: 20px;
+  }
+
+  #trip-cards {
+    padding: 20px;
+  }
+}
+
+/* ABOUT US */
+.about-hero {
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://images.unsplash.com/photo-1499678329028-101435549a4e?auto=format&fit=crop&w=1920&h=600') center/cover;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.icon-bg {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(253, 126, 20, 0.1);
+    border-radius: 50%;
+}
+
+.bg-orange-light {
+    background-color: rgba(253, 126, 20, 0.05);
+}
+
+.text-orange {
+    color: #fd7e14;
+}
+
+.btn-outline-secondary {
+    border-color: #dee2e6;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
