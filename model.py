@@ -5,6 +5,9 @@ from passlib.hash import argon2
 from argon2 import PasswordHasher
 from sqlalchemy import create_engine, text
 
+
+DB_URI = "postgresql://trips_eskt_user:jJlz1FAuXJST60Z0tOypyL8MvFj2mElY@dpg-d0t7u9adbo4c739d7210-a.frankfurt-postgres.render.com/trips_eskt"
+
 ph = PasswordHasher()
 db = SQLAlchemy()
 
@@ -125,7 +128,7 @@ class Image(db.Model):
 
 
 
-def connect_to_db(flask_app, db_uri="postgresql://postgres:000000@localhost:5432/trips", echo=True): # "postgresql:///trips"
+def connect_to_db(flask_app, db_uri=DB_URI, echo=True):
     """Connect to dabatase."""
     flask_app.config["SQLALCHEMY_DATABASE_URI"] = db_uri
     flask_app.config["SQLALCHEMY_ECHO"] = False
